@@ -7,28 +7,28 @@
 <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+Devanagari:wght@300;400;500;600;700;800&family=Tiro+Devanagari+Hindi:ital@0;1&display=swap" rel="stylesheet">
 <style>
   :root {
-    --gov-dark: #1B3A2D;
-    --gov-mid: #245C3E;
-    --gov-light: #2E7D52;
-    --gov-accent: #C8A415;
-    --gov-accent-dark: #A07E00;
-    --gov-blue: #0A3D6B;
-    --gov-blue-mid: #1558A0;
+    --gov-dark: #0D2B6B;
+    --gov-mid: #1541A0;
+    --gov-light: #1E56C8;
+    --gov-accent: #D4A017;
+    --gov-accent-dark: #A87C00;
+    --gov-blue: #0B2559;
+    --gov-blue-mid: #1541A0;
     --gov-red: #B71C1C;
-    --bg-cream: #F5F0E8;
-    --bg-white: #FDFCFA;
-    --text-dark: #1A1A1A;
-    --text-mid: #3D3D3D;
-    --text-light: #6B6B6B;
-    --border: #D4C9A8;
-    --shadow: rgba(0,0,0,0.12);
+    --bg-cream: #F4F6FB;
+    --bg-white: #FAFBFF;
+    --text-dark: #0D1B3E;
+    --text-mid: #2C3E6B;
+    --text-light: #5C6B8A;
+    --border: #BCC8E8;
+    --shadow: rgba(13,43,107,0.12);
   }
 
   * { box-sizing: border-box; margin: 0; padding: 0; }
 
   body {
     font-family: 'Noto Sans Devanagari', sans-serif;
-    background: var(--bg-cream);
+    background: linear-gradient(160deg, #EEF2FF 0%, #F4F6FB 50%, #EAF0FF 100%);
     color: var(--text-dark);
     min-height: 100vh;
   }
@@ -78,7 +78,7 @@
 
   /* ===== HEADER ===== */
   .gov-header {
-    background: linear-gradient(135deg, var(--gov-dark) 0%, var(--gov-mid) 50%, var(--gov-dark) 100%);
+    background: linear-gradient(135deg, #061A4A 0%, #0D2B6B 35%, #1541A0 65%, #0D2B6B 85%, #061A4A 100%);
     color: #fff;
     position: relative;
     overflow: hidden;
@@ -167,11 +167,11 @@
 
   /* ===== NAVIGATION ===== */
   .gov-nav {
-    background: var(--gov-accent);
+    background: linear-gradient(90deg, #0D2B6B 0%, #1541A0 50%, #0D2B6B 100%);
     display: flex;
     flex-wrap: wrap;
-    border-bottom: 3px solid var(--gov-accent-dark);
-    box-shadow: 0 3px 12px rgba(0,0,0,0.2);
+    border-bottom: 3px solid #D4A017;
+    box-shadow: 0 4px 18px rgba(13,43,107,0.35);
     position: sticky;
     top: 0;
     z-index: 100;
@@ -184,18 +184,18 @@
     font-family: 'Noto Sans Devanagari', sans-serif;
     font-size: 13px;
     font-weight: 700;
-    color: #1A0E00;
+    color: rgba(255,255,255,0.88);
     border: none;
     background: none;
     cursor: pointer;
     transition: all 0.18s;
     white-space: nowrap;
-    border-right: 1px solid rgba(0,0,0,0.1);
+    border-right: 1px solid rgba(255,255,255,0.1);
     position: relative;
   }
-  .nav-btn:hover { background: rgba(0,0,0,0.1); }
+  .nav-btn:hover { background: rgba(255,255,255,0.12); color: #FFE082; }
   .nav-btn.active {
-    background: var(--gov-dark);
+    background: linear-gradient(180deg, #D4A017 0%, #A87C00 100%);
     color: #fff;
   }
   .nav-btn.active::after {
@@ -203,14 +203,14 @@
     position: absolute;
     bottom: 0; left: 0; right: 0;
     height: 3px;
-    background: #fff;
+    background: #FFE082;
   }
   .nav-icon { font-size: 15px; }
 
   /* ===== TERM BANNER ===== */
   .term-banner {
-    background: linear-gradient(90deg, var(--gov-blue) 0%, var(--gov-blue-mid) 100%);
-    color: #fff;
+    background: linear-gradient(90deg, #061A4A 0%, #0D2B6B 50%, #061A4A 100%);
+    color: #FFE082;
     padding: 10px 20px;
     display: flex;
     align-items: center;
@@ -219,14 +219,16 @@
     flex-wrap: wrap;
     font-size: 13px;
     font-weight: 600;
-    border-bottom: 2px solid rgba(255,255,255,0.15);
+    border-bottom: 2px solid rgba(212,160,23,0.4);
   }
   .term-pill {
     display: flex; align-items: center; gap: 6px;
-    background: rgba(255,255,255,0.12);
+    background: rgba(212,160,23,0.15);
+    border: 1px solid rgba(212,160,23,0.4);
     padding: 4px 12px;
     border-radius: 100px;
     font-size: 12px;
+    color: #FFE082;
   }
 
   /* ===== MAIN LAYOUT ===== */
@@ -257,15 +259,15 @@
     box-shadow: 0 2px 8px var(--shadow);
   }
   .section-head {
-    background: linear-gradient(90deg, var(--gov-dark) 0%, var(--gov-mid) 100%);
-    color: #fff;
+    background: linear-gradient(90deg, #0D2B6B 0%, #1541A0 70%, #1E56C8 100%);
+    color: #FFE082;
     padding: 10px 16px;
     font-size: 14px;
     font-weight: 700;
     display: flex;
     align-items: center;
     gap: 8px;
-    border-bottom: 2px solid var(--gov-accent);
+    border-bottom: 2px solid #D4A017;
   }
   .section-body { padding: 14px 16px; }
 
@@ -318,11 +320,11 @@
     font-size: 12.5px;
   }
   .members-table th {
-    background: var(--gov-dark);
-    color: #fff;
+    background: linear-gradient(90deg, #0D2B6B, #1541A0);
+    color: #FFE082;
     padding: 9px 8px;
     font-weight: 600;
-    border: 1px solid rgba(255,255,255,0.15);
+    border: 1px solid rgba(255,255,255,0.12);
     text-align: right;
   }
   .members-table th:first-child, .members-table td:first-child { text-align: center; }
@@ -331,8 +333,8 @@
     border: 1px solid var(--border);
     vertical-align: middle;
   }
-  .members-table tr:nth-child(even) td { background: #F8F4EC; }
-  .members-table tr:hover td { background: #EAF5EE; }
+  .members-table tr:nth-child(even) td { background: #EEF2FF; }
+  .members-table tr:hover td { background: #DBEAFE; }
   .pad-tag {
     display: inline-block;
     font-size: 10px;
@@ -475,15 +477,15 @@
 
   /* ===== FOOTER ===== */
   .gov-footer {
-    background: var(--gov-dark);
+    background: linear-gradient(135deg, #061A4A 0%, #0D2B6B 100%);
     color: rgba(255,255,255,0.75);
     text-align: center;
     padding: 14px 20px;
     font-size: 12px;
-    border-top: 3px solid var(--gov-accent);
+    border-top: 3px solid #D4A017;
     margin-top: 8px;
   }
-  .gov-footer a { color: var(--gov-accent); text-decoration: none; }
+  .gov-footer a { color: #FFE082; text-decoration: none; }
   .gov-footer p + p { margin-top: 5px; }
 
   /* ===== MODAL ===== */
@@ -502,12 +504,12 @@
     border-radius: 12px;
     width: 100%; max-width: 540px;
     max-height: 90vh; overflow-y: auto;
-    box-shadow: 0 16px 48px rgba(0,0,0,0.35);
-    border-top: 5px solid var(--gov-dark);
+    box-shadow: 0 16px 48px rgba(13,43,107,0.4);
+    border-top: 5px solid #D4A017;
     position: relative;
   }
   .modal-header {
-    background: linear-gradient(135deg, var(--gov-dark), var(--gov-mid));
+    background: linear-gradient(135deg, #0D2B6B, #1E56C8);
     color: #fff;
     padding: 16px 20px 14px;
     position: sticky; top: 0; z-index: 1;
@@ -546,12 +548,13 @@
   .form-row { display: grid; grid-template-columns: 1fr 1fr; gap: 10px; }
   @media(max-width:420px) { .form-row { grid-template-columns: 1fr; } }
   .form-submit {
-    width: 100%; background: linear-gradient(135deg, var(--gov-dark), var(--gov-mid));
+    width: 100%; background: linear-gradient(135deg, #0D2B6B, #1E56C8);
     color: #fff; border: none; border-radius: 8px; padding: 12px;
     font-family: inherit; font-size: 14px; font-weight: 700;
-    cursor: pointer; margin-top: 6px; transition: opacity 0.2s;
+    cursor: pointer; margin-top: 6px; transition: all 0.25s;
+    box-shadow: 0 4px 14px rgba(13,43,107,0.3);
   }
-  .form-submit:hover { opacity: 0.9; }
+  .form-submit:hover { opacity: 0.92; transform: translateY(-2px); box-shadow: 0 8px 24px rgba(13,43,107,0.4); }
   .form-success { display: none; text-align: center; padding: 28px 16px; }
   .form-success .tick { font-size: 52px; margin-bottom: 12px; }
   .form-success h3 { color: var(--gov-dark); font-size: 17px; margin: 0 0 7px; }
@@ -560,6 +563,558 @@
   /* ===== PAGE SECTIONS ===== */
   .page { display: none; }
   .page.active { display: block; }
+
+  /* ============================================================
+     MEGA ANIMATION SYSTEM — v2
+  ============================================================ */
+
+  /* --- Keyframes library --- */
+  @keyframes ticker { from { transform: translateX(0); } to { transform: translateX(-100%); } }
+
+  @keyframes pageDrop {
+    0%   { opacity:0; transform: translateY(-40px) scale(0.97); filter: blur(4px); }
+    60%  { opacity:1; filter: blur(0); }
+    100% { transform: translateY(0) scale(1); }
+  }
+  @keyframes rocketUp {
+    0%   { opacity:0; transform: translateY(60px) scale(0.88) rotate(-2deg); }
+    55%  { opacity:1; transform: translateY(-8px) scale(1.03) rotate(0.5deg); }
+    75%  { transform: translateY(3px) scale(0.99) rotate(-0.3deg); }
+    100% { opacity:1; transform: translateY(0) scale(1) rotate(0); }
+  }
+  @keyframes swooshLeft {
+    0%   { opacity:0; transform: translateX(-60px) skewX(6deg); }
+    65%  { opacity:1; transform: translateX(4px) skewX(-1deg); }
+    100% { opacity:1; transform: translateX(0) skewX(0); }
+  }
+  @keyframes swooshRight {
+    0%   { opacity:0; transform: translateX(60px) skewX(-6deg); }
+    65%  { opacity:1; transform: translateX(-4px) skewX(1deg); }
+    100% { opacity:1; transform: translateX(0) skewX(0); }
+  }
+  @keyframes popBounce {
+    0%   { opacity:0; transform: scale(0.4) rotate(-8deg); }
+    50%  { opacity:1; transform: scale(1.12) rotate(2deg); }
+    70%  { transform: scale(0.94) rotate(-1deg); }
+    85%  { transform: scale(1.04) rotate(0.5deg); }
+    100% { transform: scale(1) rotate(0); }
+  }
+  @keyframes cardFlip {
+    0%   { opacity:0; transform: perspective(600px) rotateY(-45deg) translateX(-20px); }
+    60%  { opacity:1; transform: perspective(600px) rotateY(4deg) translateX(2px); }
+    100% { opacity:1; transform: perspective(600px) rotateY(0) translateX(0); }
+  }
+  @keyframes dropReveal {
+    0%   { opacity:0; transform: translateY(-30px) scaleY(0.6); transform-origin: top; }
+    60%  { transform: translateY(4px) scaleY(1.02); }
+    100% { opacity:1; transform: translateY(0) scaleY(1); }
+  }
+  @keyframes glowPop {
+    0%   { opacity:0; transform: scale(0.6); box-shadow:0 0 0 0 rgba(200,164,21,0); }
+    50%  { opacity:1; transform: scale(1.1); box-shadow:0 0 24px 6px rgba(200,164,21,0.35); }
+    80%  { transform: scale(0.97); box-shadow:0 0 8px 2px rgba(200,164,21,0.15); }
+    100% { transform: scale(1); box-shadow:0 0 0 0 rgba(200,164,21,0); }
+  }
+  @keyframes spinZoom {
+    0%   { opacity:0; transform: scale(0.3) rotate(-180deg); }
+    70%  { opacity:1; transform: scale(1.08) rotate(8deg); }
+    100% { transform: scale(1) rotate(0deg); }
+  }
+  @keyframes fadeUp {
+    from { opacity:0; transform: translateY(20px); }
+    to   { opacity:1; transform: translateY(0); }
+  }
+  @keyframes slideInRow {
+    from { opacity:0; transform: translateX(-40px); background: rgba(200,164,21,0.08); }
+    to   { opacity:1; transform: translateX(0); background: transparent; }
+  }
+
+  /* --- Continuous ambient animations --- */
+  @keyframes shimmerSweep {
+    0%   { left: -100%; }
+    55%  { left: 150%; }
+    100% { left: 150%; }
+  }
+  @keyframes pulseGlow {
+    0%,100% { box-shadow: 0 0 0 0 rgba(200,164,21,0); }
+    50%      { box-shadow: 0 0 0 6px rgba(200,164,21,0.22); }
+  }
+  @keyframes floatY {
+    0%,100% { transform: translateY(0px); }
+    50%      { transform: translateY(-5px); }
+  }
+  @keyframes borderPulse {
+    0%,100% { border-color: var(--gov-accent); }
+    50%      { border-color: var(--gov-red); box-shadow: -3px 0 12px rgba(183,28,28,0.3); }
+  }
+  @keyframes accentLine {
+    0%   { width: 0; opacity:0; }
+    100% { width: 100%; opacity:1; }
+  }
+  @keyframes headerParticle {
+    0%   { transform: translateY(0) translateX(0) scale(1); opacity:0.7; }
+    100% { transform: translateY(-80px) translateX(20px) scale(0); opacity:0; }
+  }
+  @keyframes navActiveSlide {
+    0%   { transform: scaleX(0); }
+    100% { transform: scaleX(1); }
+  }
+  @keyframes counterUp {
+    from { opacity:0; transform: translateY(10px); }
+    to   { opacity:1; transform: translateY(0); }
+  }
+  @keyframes ripple {
+    0%   { transform: scale(0); opacity:1; }
+    100% { transform: scale(4); opacity:0; }
+  }
+
+  /* ============================================================
+     HEADER — cinematic entrance
+  ============================================================ */
+  .gov-header { position: relative; overflow: hidden; }
+
+  /* Animated diagonal light ray across header */
+  .gov-header::after {
+    content:'';
+    position: absolute;
+    top: -50%; left: -60%;
+    width: 40%; height: 200%;
+    background: linear-gradient(105deg, transparent, rgba(255,255,255,0.04), transparent);
+    animation: headerRay 6s ease-in-out infinite;
+    pointer-events: none;
+  }
+  @keyframes headerRay {
+    0%,100% { left: -60%; }
+    50%      { left: 120%; }
+  }
+
+  .emblem-wrap {
+    animation: spinZoom 0.9s cubic-bezier(0.34,1.4,0.64,1) 0.1s both;
+  }
+  /* Subtle emblem float after load */
+  .emblem-wrap:not(.animating) {
+    animation: spinZoom 0.9s cubic-bezier(0.34,1.4,0.64,1) 0.1s both,
+               floatY 4s ease-in-out 1.2s infinite;
+  }
+
+  .header-text h1 { animation: swooshLeft 0.7s cubic-bezier(0.22,1,0.36,1) 0.2s both; }
+  .header-text .sub { animation: swooshLeft 0.6s cubic-bezier(0.22,1,0.36,1) 0.35s both; }
+  .header-text .est { animation: fadeUp 0.5s ease 0.5s both; }
+  .header-badge { animation: glowPop 0.8s cubic-bezier(0.34,1.4,0.64,1) 0.4s both; }
+
+  .motto-strip {
+    position: relative; overflow: hidden;
+    animation: fadeUp 0.5s ease 0.55s both;
+  }
+  .motto-strip::after {
+    content:'';
+    position: absolute; top:0; left:-100%; width:50%; height:100%;
+    background: linear-gradient(90deg, transparent, rgba(255,255,255,0.1), transparent);
+    animation: shimmerSweep 4s ease-in-out 1s infinite;
+  }
+
+  /* ============================================================
+     NAVIGATION — premium tab bar
+  ============================================================ */
+  .gov-nav { perspective: 800px; }
+
+  .nav-btn {
+    transition: all 0.3s cubic-bezier(0.34,1.56,0.64,1) !important;
+    overflow: hidden;
+    position: relative;
+  }
+  /* Shimmer sweep */
+  .nav-btn::before {
+    content:'';
+    position: absolute; top:0; left:-120%;
+    width:60%; height:100%;
+    background: linear-gradient(110deg, transparent, rgba(255,255,255,0.4), transparent);
+    transition: left 0.45s ease;
+    pointer-events: none;
+  }
+  .nav-btn:hover::before { left: 150%; }
+
+  /* Animated underline bar */
+  .nav-btn::after {
+    content:'';
+    position: absolute; bottom:0; left:50%;
+    width:0%; height:3px;
+    background: var(--gov-dark);
+    transition: all 0.3s cubic-bezier(0.34,1.56,0.64,1);
+    transform: translateX(-50%);
+    border-radius: 2px 2px 0 0;
+  }
+  .nav-btn:hover::after { width: 80%; }
+  .nav-btn.active::after { width: 100%; animation: navActiveSlide 0.3s ease both; }
+
+  .nav-btn:hover {
+    transform: translateY(-3px) scale(1.05) !important;
+    box-shadow: 0 6px 20px rgba(0,0,0,0.2) !important;
+    background: rgba(0,0,0,0.08) !important;
+  }
+  .nav-btn:active { transform: scale(0.95) translateY(1px) !important; }
+  .nav-btn.active {
+    animation: popBounce 0.4s cubic-bezier(0.34,1.56,0.64,1) both,
+               pulseGlow 2.5s ease-in-out 0.5s infinite !important;
+    background: var(--gov-dark) !important;
+    color: #fff !important;
+  }
+
+  /* Staggered nav entrance on page load */
+  .nav-btn:nth-child(1) { animation-delay: 0.05s; }
+  .nav-btn:nth-child(2) { animation-delay: 0.10s; }
+  .nav-btn:nth-child(3) { animation-delay: 0.15s; }
+  .nav-btn:nth-child(4) { animation-delay: 0.20s; }
+  .nav-btn:nth-child(5) { animation-delay: 0.25s; }
+  .nav-btn:nth-child(6) { animation-delay: 0.30s; }
+  .nav-btn:nth-child(7) { animation-delay: 0.35s; }
+
+  /* ============================================================
+     PAGE TRANSITIONS
+  ============================================================ */
+  .page.active {
+    animation: pageDrop 0.5s cubic-bezier(0.22,1,0.36,1) both;
+  }
+
+  /* ============================================================
+     SECTIONS — animated entry
+  ============================================================ */
+  .section {
+    transition: box-shadow 0.3s, transform 0.3s !important;
+  }
+  .section:hover {
+    box-shadow: 0 8px 32px rgba(27,58,45,0.13) !important;
+    transform: translateY(-2px) !important;
+  }
+
+  .page.active .section { animation: dropReveal 0.5s cubic-bezier(0.22,1,0.36,1) both; }
+  .page.active .section:nth-child(1) { animation-delay: 0.03s; }
+  .page.active .section:nth-child(2) { animation-delay: 0.12s; }
+  .page.active .section:nth-child(3) { animation-delay: 0.21s; }
+  .page.active .section:nth-child(4) { animation-delay: 0.30s; }
+
+  /* Section head — shimmer + gradient shift */
+  .section-head {
+    position: relative; overflow: hidden;
+    background-size: 200% 100% !important;
+    transition: background-position 0.4s ease !important;
+  }
+  .section:hover .section-head { background-position: 100% 0 !important; }
+  .section-head::after {
+    content:'';
+    position: absolute; top:0; left:-100%; width:55%; height:100%;
+    background: linear-gradient(110deg, transparent, rgba(255,255,255,0.1), transparent);
+    animation: shimmerSweep 3.5s ease-in-out infinite;
+    pointer-events: none;
+  }
+
+  /* ============================================================
+     OFFICIAL CARDS — 3D flip entrance + hover lift
+  ============================================================ */
+  .official-card {
+    transition: all 0.35s cubic-bezier(0.34,1.56,0.64,1) !important;
+    position: relative;
+    overflow: hidden;
+  }
+  /* Shine overlay on hover */
+  .official-card::before {
+    content:'';
+    position: absolute; top:0; left:-100%; width:60%; height:100%;
+    background: linear-gradient(110deg, transparent, rgba(255,255,255,0.18), transparent);
+    transition: left 0.5s ease;
+    pointer-events: none;
+    z-index: 1;
+  }
+  .official-card:hover::before { left: 140%; }
+  .official-card:hover {
+    box-shadow: 0 16px 40px rgba(27,58,45,0.22) !important;
+    transform: translateY(-10px) scale(1.04) rotate(0.5deg) !important;
+    border-color: var(--gov-accent) !important;
+  }
+  /* Avatar pop on card hover */
+  .official-card:hover .official-avatar {
+    transform: scale(1.1);
+    box-shadow: 0 0 0 4px var(--gov-accent), 0 6px 20px rgba(0,0,0,0.2) !important;
+  }
+  .official-avatar { transition: all 0.35s cubic-bezier(0.34,1.56,0.64,1) !important; }
+
+  .page.active .official-card { animation: cardFlip 0.55s cubic-bezier(0.22,1,0.36,1) both; }
+  .page.active .official-card:nth-child(1) { animation-delay: 0.06s; }
+  .page.active .official-card:nth-child(2) { animation-delay: 0.16s; }
+  .page.active .official-card:nth-child(3) { animation-delay: 0.26s; }
+  .page.active .official-card:nth-child(4) { animation-delay: 0.36s; }
+  .page.active .official-card:nth-child(5) { animation-delay: 0.46s; }
+  .page.active .official-card:nth-child(6) { animation-delay: 0.56s; }
+
+  /* ============================================================
+     SEVA CARDS — rocket-up entrance
+  ============================================================ */
+  .seva-card {
+    transition: all 0.32s cubic-bezier(0.34,1.56,0.64,1) !important;
+    position: relative; overflow: hidden;
+  }
+  .seva-card::after {
+    content:'';
+    position: absolute; inset:0;
+    background: linear-gradient(135deg, rgba(46,125,82,0.08) 0%, transparent 60%);
+    opacity:0; transition: opacity 0.3s;
+    pointer-events:none;
+  }
+  .seva-card:hover::after { opacity:1; }
+  .seva-card:hover {
+    transform: translateY(-6px) scale(1.04) !important;
+    box-shadow: 0 12px 32px rgba(27,58,45,0.18) !important;
+    border-color: var(--gov-light) !important;
+  }
+  .seva-card:hover .seva-icon { animation: floatY 1s ease-in-out infinite; }
+
+  .page.active .seva-card { animation: rocketUp 0.5s cubic-bezier(0.22,1,0.36,1) both; }
+  .page.active .seva-card:nth-child(1) { animation-delay: 0.04s; }
+  .page.active .seva-card:nth-child(2) { animation-delay: 0.10s; }
+  .page.active .seva-card:nth-child(3) { animation-delay: 0.16s; }
+  .page.active .seva-card:nth-child(4) { animation-delay: 0.22s; }
+  .page.active .seva-card:nth-child(5) { animation-delay: 0.28s; }
+  .page.active .seva-card:nth-child(6) { animation-delay: 0.34s; }
+  .page.active .seva-card:nth-child(7) { animation-delay: 0.40s; }
+  .page.active .seva-card:nth-child(8) { animation-delay: 0.46s; }
+
+  /* ============================================================
+     YOJANA ITEMS — swoosh from left
+  ============================================================ */
+  .yojana-item {
+    transition: all 0.3s cubic-bezier(0.34,1.56,0.64,1) !important;
+    position: relative; overflow: hidden;
+  }
+  /* Animated left accent bar */
+  .yojana-item::before {
+    content:'';
+    position: absolute; left:0; top:0;
+    width:3px; height:100%;
+    background: var(--gov-accent);
+    transform: scaleY(0); transform-origin: top;
+    transition: transform 0.3s ease;
+  }
+  .yojana-item:hover::before { transform: scaleY(1); }
+  .yojana-item:hover {
+    transform: translateX(10px) !important;
+    box-shadow: 0 6px 20px rgba(0,0,0,0.12) !important;
+    background: linear-gradient(90deg, rgba(46,125,82,0.07), #EAF5EE) !important;
+    padding-left: 16px !important;
+  }
+  .page.active .yojana-item { animation: swooshLeft 0.45s cubic-bezier(0.22,1,0.36,1) both; }
+  .page.active .yojana-item:nth-child(1) { animation-delay: 0.04s; }
+  .page.active .yojana-item:nth-child(2) { animation-delay: 0.10s; }
+  .page.active .yojana-item:nth-child(3) { animation-delay: 0.16s; }
+  .page.active .yojana-item:nth-child(4) { animation-delay: 0.22s; }
+  .page.active .yojana-item:nth-child(5) { animation-delay: 0.28s; }
+  .page.active .yojana-item:nth-child(6) { animation-delay: 0.34s; }
+  .page.active .yojana-item:nth-child(7) { animation-delay: 0.40s; }
+  .page.active .yojana-item:nth-child(8) { animation-delay: 0.46s; }
+  .page.active .yojana-item:nth-child(9) { animation-delay: 0.52s; }
+  .page.active .yojana-item:nth-child(10){ animation-delay: 0.58s; }
+
+  /* ============================================================
+     VIKAS ITEMS
+  ============================================================ */
+  .vikas-item {
+    transition: all 0.3s cubic-bezier(0.34,1.56,0.64,1) !important;
+    position: relative;
+  }
+  .vikas-item:hover {
+    transform: translateX(8px) scale(1.01) !important;
+    box-shadow: 4px 4px 16px rgba(0,0,0,0.1) !important;
+    border-left-width: 6px !important;
+  }
+  .page.active .vikas-item { animation: swooshLeft 0.45s cubic-bezier(0.22,1,0.36,1) both; }
+  .page.active .vikas-item:nth-child(1) { animation-delay: 0.06s; }
+  .page.active .vikas-item:nth-child(2) { animation-delay: 0.14s; }
+  .page.active .vikas-item:nth-child(3) { animation-delay: 0.22s; }
+  .page.active .vikas-item:nth-child(4) { animation-delay: 0.30s; }
+  .page.active .vikas-item:nth-child(5) { animation-delay: 0.38s; }
+  .page.active .vikas-item:nth-child(6) { animation-delay: 0.46s; }
+
+  /* ============================================================
+     DOC ITEMS — swoosh from right
+  ============================================================ */
+  .doc-item {
+    transition: all 0.3s cubic-bezier(0.34,1.56,0.64,1) !important;
+    position: relative; overflow: hidden;
+  }
+  .doc-item::after {
+    content:'';
+    position: absolute; right:0; top:0;
+    width:3px; height:100%;
+    background: var(--gov-light);
+    transform: scaleY(0); transform-origin: bottom;
+    transition: transform 0.3s ease;
+  }
+  .doc-item:hover::after { transform: scaleY(1); }
+  .doc-item:hover {
+    transform: translateX(-8px) !important;
+    box-shadow: 0 6px 20px rgba(0,0,0,0.1) !important;
+    background: linear-gradient(270deg, rgba(46,125,82,0.07), #EAF5EE) !important;
+  }
+  .page.active .doc-item { animation: swooshRight 0.45s cubic-bezier(0.22,1,0.36,1) both; }
+  .page.active .doc-item:nth-child(1) { animation-delay: 0.06s; }
+  .page.active .doc-item:nth-child(2) { animation-delay: 0.13s; }
+  .page.active .doc-item:nth-child(3) { animation-delay: 0.20s; }
+  .page.active .doc-item:nth-child(4) { animation-delay: 0.27s; }
+  .page.active .doc-item:nth-child(5) { animation-delay: 0.34s; }
+  .page.active .doc-item:nth-child(6) { animation-delay: 0.41s; }
+
+  /* ============================================================
+     MEMBERS TABLE — row-by-row reveal with color flash
+  ============================================================ */
+  .page.active .members-table tr { animation: slideInRow 0.4s ease both; }
+  .page.active .members-table tr:nth-child(1) { animation-delay: 0.05s; }
+  .page.active .members-table tr:nth-child(2) { animation-delay: 0.10s; }
+  .page.active .members-table tr:nth-child(3) { animation-delay: 0.15s; }
+  .page.active .members-table tr:nth-child(4) { animation-delay: 0.20s; }
+  .page.active .members-table tr:nth-child(5) { animation-delay: 0.25s; }
+  .page.active .members-table tr:nth-child(6) { animation-delay: 0.30s; }
+  .page.active .members-table tr:nth-child(7) { animation-delay: 0.35s; }
+  .page.active .members-table tr:nth-child(8) { animation-delay: 0.40s; }
+  .page.active .members-table tr:nth-child(9) { animation-delay: 0.45s; }
+  .page.active .members-table tr:nth-child(10){ animation-delay: 0.50s; }
+  .members-table tr { transition: background 0.2s !important; }
+  .members-table tr:hover td { 
+    background: linear-gradient(90deg, rgba(46,125,82,0.12), rgba(46,125,82,0.06)) !important;
+    transform: scale(1.005);
+  }
+
+  /* ============================================================
+     QUICK LINK BUTTONS — glow pop
+  ============================================================ */
+  .quick-link-btn {
+    transition: all 0.3s cubic-bezier(0.34,1.56,0.64,1) !important;
+    position: relative; overflow: hidden;
+  }
+  .quick-link-btn::before {
+    content:'';
+    position: absolute; top:50%; left:50%;
+    width:0; height:0;
+    background: rgba(255,255,255,0.25);
+    border-radius: 50%;
+    transform: translate(-50%,-50%);
+    transition: width 0.4s ease, height 0.4s ease;
+  }
+  .quick-link-btn:hover::before { width:200px; height:200px; }
+  .quick-link-btn:hover {
+    transform: scale(1.07) translateY(-3px) !important;
+    box-shadow: 0 10px 28px rgba(0,0,0,0.28) !important;
+    opacity: 1 !important;
+  }
+
+  /* ============================================================
+     HERO SECTION
+  ============================================================ */
+  .hero-text h2  { animation: swooshLeft 0.75s cubic-bezier(0.22,1,0.36,1) 0.1s both; }
+  .hero-text p   { animation: swooshLeft 0.65s cubic-bezier(0.22,1,0.36,1) 0.28s both; }
+  .hero-text .hero-cta { animation: glowPop 0.7s cubic-bezier(0.34,1.4,0.64,1) 0.45s both; }
+
+  /* Animated hero overlay gradient shift */
+  .hero-overlay {
+    background-size: 200% 100% !important;
+    animation: heroGradientShift 8s ease-in-out infinite !important;
+  }
+  @keyframes heroGradientShift {
+    0%,100% { background-position: 0% 0%; }
+    50%      { background-position: 100% 0%; }
+  }
+
+  /* ============================================================
+     NOTICE BOARD — pulsing border + float
+  ============================================================ */
+  .notice-item {
+    animation: borderPulse 3.5s ease-in-out infinite !important;
+    transition: transform 0.25s ease, box-shadow 0.25s ease !important;
+  }
+  .notice-item:hover {
+    transform: translateX(5px) !important;
+    box-shadow: 0 4px 16px rgba(0,0,0,0.1) !important;
+  }
+
+  /* ============================================================
+     ALERT TICKER — enhanced
+  ============================================================ */
+  .alert-label {
+    position: relative; overflow: hidden;
+  }
+  .alert-label::after {
+    content:'';
+    position: absolute; top:0; left:-100%; width:100%; height:100%;
+    background: linear-gradient(90deg, transparent, rgba(255,255,255,0.15), transparent);
+    animation: shimmerSweep 2s ease-in-out infinite;
+  }
+
+  /* ============================================================
+     TERM BANNER PILLS
+  ============================================================ */
+  .term-pill {
+    animation: fadeUp 0.5s ease both;
+    transition: transform 0.25s cubic-bezier(0.34,1.56,0.64,1) !important;
+  }
+  .term-pill:hover { transform: scale(1.06) translateY(-2px) !important; }
+  .term-pill:nth-child(1) { animation-delay: 0.1s; }
+  .term-pill:nth-child(2) { animation-delay: 0.2s; }
+  .term-pill:nth-child(3) { animation-delay: 0.3s; }
+
+  /* ============================================================
+     EXTERNAL LINKS
+  ============================================================ */
+  .ext-link {
+    transition: all 0.25s cubic-bezier(0.34,1.56,0.64,1) !important;
+    position: relative;
+  }
+  .ext-link::after {
+    content:'';
+    position: absolute; bottom:0; left:0;
+    width:0; height:1px;
+    background: var(--gov-dark);
+    transition: width 0.3s ease;
+  }
+  .ext-link:hover::after { width: 100%; }
+  .ext-link:hover {
+    transform: translateX(6px) !important;
+    color: var(--gov-dark) !important;
+    padding-left: 4px !important;
+  }
+
+  /* ============================================================
+     POST TAGS — shimmer
+  ============================================================ */
+  .post-tag {
+    position: relative; overflow: hidden;
+    animation: popBounce 0.4s ease both;
+  }
+  .post-tag::after {
+    content:'';
+    position: absolute; top:0; left:-100%; width:60%; height:100%;
+    background: linear-gradient(90deg, transparent, rgba(255,255,255,0.3), transparent);
+    animation: shimmerSweep 2.5s ease-in-out 1s infinite;
+  }
+
+  /* ============================================================
+     SIDEBAR — staggered entrance
+  ============================================================ */
+  .sidebar-col .section { animation: swooshRight 0.5s cubic-bezier(0.22,1,0.36,1) both; }
+  .sidebar-col .section:nth-child(1) { animation-delay: 0.15s; }
+  .sidebar-col .section:nth-child(2) { animation-delay: 0.30s; }
+  .sidebar-col .section:nth-child(3) { animation-delay: 0.45s; }
+
+  /* ============================================================
+     FOOTER
+  ============================================================ */
+  .gov-footer {
+    animation: fadeUp 0.6s ease 0.5s both;
+    position: relative; overflow: hidden;
+  }
+  .gov-footer::before {
+    content:'';
+    position: absolute; top:0; left:-100%; width:50%; height:100%;
+    background: linear-gradient(90deg, transparent, rgba(200,164,21,0.05), transparent);
+    animation: shimmerSweep 5s ease-in-out infinite;
+  }
 
   /* ===== HERO BANNER ===== */
   .hero-banner {
@@ -644,6 +1199,128 @@
 
   /* Notice item full width */
   .notice-item { width: 100%; }
+
+  /* ============================================================
+     ROYAL BLUE & GOLD — Polish Layer
+  ============================================================ */
+
+  /* Top bar */
+  .gov-topbar {
+    background: #061A4A;
+    border-bottom: 1px solid rgba(212,160,23,0.35);
+  }
+  .gov-topbar a { color: #FFE082 !important; }
+
+  /* Emblem ring in gold */
+  .emblem-wrap {
+    border-color: #D4A017 !important;
+    box-shadow: 0 0 0 2px #fff, 0 0 0 4px #D4A017, 0 6px 20px rgba(13,43,107,0.4) !important;
+  }
+
+  /* Header badge gold pill */
+  .header-badge .badge-pill {
+    background: rgba(212,160,23,0.18);
+    border-color: #D4A017;
+    color: #FFE082;
+  }
+  .header-badge .badge-year { color: #FFE082; }
+
+  /* Motto strip gold tint */
+  .motto-strip {
+    background: rgba(212,160,23,0.12);
+    border-top: 1px solid rgba(212,160,23,0.3);
+  }
+
+  /* Sidebar */
+  .sidebar-col {
+    background: #EEF3FF;
+    border-left: 1px solid #BCC8E8;
+  }
+
+  /* Notice item — blue left accent */
+  .notice-item {
+    border-left: 3px solid #1541A0;
+    background: #EEF3FF;
+    animation: borderPulse 3.5s ease-in-out infinite !important;
+  }
+  @keyframes borderPulse {
+    0%,100% { border-left-color: #1541A0; }
+    50%      { border-left-color: #D4A017; box-shadow: -3px 0 10px rgba(212,160,23,0.25); }
+  }
+
+  /* Quick link buttons — blue/gold */
+  .quick-link-btn[style*="background:var(--gov-dark)"] { background: linear-gradient(135deg, #0D2B6B, #1541A0) !important; }
+  .quick-link-btn[style*="background:var(--gov-blue)"] { background: linear-gradient(135deg, #1541A0, #1E56C8) !important; }
+
+  /* Yojana item hover — blue tint */
+  .yojana-item:hover { border-color: #1541A0 !important; background: #EEF3FF !important; }
+
+  /* Seva card hover — blue shadow */
+  .seva-card:hover {
+    border-color: #1541A0 !important;
+    box-shadow: 0 10px 30px rgba(13,43,107,0.18) !important;
+  }
+
+  /* Official card hover — gold ring */
+  .official-card:hover {
+    border-color: #D4A017 !important;
+    box-shadow: 0 14px 36px rgba(13,43,107,0.2), 0 0 0 2px #D4A017 !important;
+  }
+  .official-card:hover .official-avatar {
+    box-shadow: 0 0 0 3px #D4A017, 0 6px 18px rgba(0,0,0,0.2) !important;
+  }
+
+  /* Vikas item — blue left bar */
+  .vikas-item { border-left-color: #1541A0 !important; background: #F0F4FF !important; }
+  .vikas-item:hover { border-left-color: #D4A017 !important; box-shadow: 4px 4px 16px rgba(13,43,107,0.12) !important; }
+
+  /* Doc item hover */
+  .doc-item:hover { border-color: #1541A0 !important; background: #EEF3FF !important; }
+  .doc-item::after { background: #D4A017 !important; }
+
+  /* Ext links */
+  .ext-link { color: #0D2B6B; }
+  .ext-link:hover { color: #0D2B6B !important; }
+  .ext-link::after { background: #D4A017 !important; }
+
+  /* Active nav underline gold */
+  .nav-btn::after { background: #D4A017 !important; }
+
+  /* Section hover lift */
+  .section:hover {
+    box-shadow: 0 8px 32px rgba(13,43,107,0.14) !important;
+    transform: translateY(-2px) !important;
+  }
+
+  /* Hero overlay — blue */
+  .hero-overlay {
+    background: linear-gradient(to right, rgba(6,26,74,0.88) 0%, rgba(13,43,107,0.5) 60%, transparent 100%);
+  }
+
+  /* Hero badge — gold */
+  .hero-badge {
+    background: linear-gradient(135deg, #D4A017, #FFE082) !important;
+    color: #0D1B3E !important;
+    box-shadow: 0 4px 16px rgba(212,160,23,0.45);
+  }
+
+  /* Form focus gold ring */
+  .form-group input:focus, .form-group select:focus, .form-group textarea:focus {
+    border-color: #1541A0 !important;
+    box-shadow: 0 0 0 3px rgba(21,65,160,0.14) !important;
+  }
+
+  /* Form section title */
+  .form-section-title {
+    color: #0D2B6B !important;
+    border-bottom-color: #BCC8E8 !important;
+  }
+
+  /* Scrollbar */
+  ::-webkit-scrollbar { width: 8px; }
+  ::-webkit-scrollbar-track { background: #EEF2FF; }
+  ::-webkit-scrollbar-thumb { background: linear-gradient(180deg, #1541A0, #D4A017); border-radius: 4px; }
+  ::-webkit-scrollbar-thumb:hover { background: #0D2B6B; }
 
 </style>
 </head>
@@ -1356,16 +2033,58 @@
 </div>
 
 <script>
+  /* ---- Ripple effect on nav buttons ---- */
+  document.addEventListener('DOMContentLoaded', function() {
+    document.querySelectorAll('.nav-btn').forEach(btn => {
+      btn.addEventListener('click', function(e) {
+        const ripple = document.createElement('span');
+        const rect = btn.getBoundingClientRect();
+        ripple.style.cssText = `
+          position:absolute; border-radius:50%;
+          background:rgba(255,255,255,0.4);
+          width:10px; height:10px;
+          top:${e.clientY - rect.top - 5}px;
+          left:${e.clientX - rect.left - 5}px;
+          pointer-events:none; z-index:10;
+          animation: ripple 0.55s ease-out forwards;
+        `;
+        btn.appendChild(ripple);
+        setTimeout(() => ripple.remove(), 600);
+      });
+    });
+
+    /* Add ripple keyframes dynamically */
+    if (!document.getElementById('rippleStyle')) {
+      const s = document.createElement('style');
+      s.id = 'rippleStyle';
+      s.textContent = `@keyframes ripple { 0%{transform:scale(0);opacity:1} 100%{transform:scale(20);opacity:0} }`;
+      document.head.appendChild(s);
+    }
+  });
+
   function showPage(pageId, btn) {
-    // hide all pages
     document.querySelectorAll('.page').forEach(p => p.classList.remove('active'));
-    // deactivate all nav buttons
     document.querySelectorAll('.nav-btn').forEach(b => b.classList.remove('active'));
-    // show selected page
-    document.getElementById('page-' + pageId).classList.add('active');
-    // activate clicked button
+
+    const targetPage = document.getElementById('page-' + pageId);
+
+    /* Re-trigger ALL animations each time tab is clicked */
+    const animatedEls = targetPage.querySelectorAll(
+      '.official-card, .seva-card, .yojana-item, .vikas-item, .doc-item, .section, .members-table tr, .term-pill'
+    );
+    animatedEls.forEach(el => {
+      el.style.animation = 'none';
+      void el.offsetWidth; /* force reflow */
+      el.style.animation = '';
+    });
+
+    /* Also re-trigger page itself */
+    targetPage.style.animation = 'none';
+    void targetPage.offsetWidth;
+    targetPage.style.animation = '';
+
+    targetPage.classList.add('active');
     btn.classList.add('active');
-    // scroll to top of content
     window.scrollTo({ top: document.querySelector('.main-wrap').offsetTop - 60, behavior: 'smooth' });
   }
 
